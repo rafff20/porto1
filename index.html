@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portofolio</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,17 +18,145 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar" id="desktop-nav">
+    <nav id="desktop-nav">
       <div class="logo">Rizqi Achmad Fauzan</div>
       <div>
         <ul class="nav-links">
           <!-- li means list -->
           <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experiences</a></li>
-          <li><a href="#Projects">Project</a></li>
+          <!-- <li><a href="#experience">Experiences</a></li> -->
+          <!-- <li><a href="#Projects">Project</a></li> -->
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Rizqi Achmad Fauzan</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experiences</a></li>
+          <li><a href="#Projects" onclick="toggleMenu()">Project</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <!-- Profile/Hero -->
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/me1.png" alt="my profile pict" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Rizqi</h1>
+        <p class="section__text__p2">Your friendly tech guy</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Rizqi Achmad Fauzan-resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn Profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/rizqi-achmad-fauzan/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github Profile"
+            class="icon"
+            onclick="location.href='https://github.com/rafff20'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/me2.jpeg"
+            alt="profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-container">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>
+                Practicum Assistant For: <br />-Operating System <br />-Parallel
+                and Distributed System
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="educationicon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Bachelor of Computer Science</p>
+            </div>
+          </div>
+          <div class="class-container">
+            <p>
+              As a recent graduate actively seeking opportunities, I have a
+              strong sense of responsibility, adaptability, and friendliness. My
+              primary interest lies in the field of informatics, and I am eager
+              to explore various opportunities within this domain.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <img src="./assets/arrow.png" alt="Arrow Icon" /> -->
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a href="rizqiafauzanwork@gmail.com">rizqiafauzanwork@gmail.com</a>
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://www.linkedin.com/in/rizqi-achmad-fauzan/"
+              >LinkedIn</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
   </body>
 </html>
